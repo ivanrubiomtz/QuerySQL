@@ -28,7 +28,7 @@ SELECT ProductID, ProductName, P.CategoryID, CategoryName, UnitPrice FROM Produc
 		    )C ON C.CategoryID = P.CategoryID
 			WHERE P.CategoryID BETWEEN 3 AND 6
 
---c.	Respete el filtro del punto anterior y ordénelo por CategoryID en forma descendente.
+--c.	Respete el filtro del punto anterior y ordénelo por CategoryID en forma ascendente.
 
 USE Northwind
 GO
@@ -36,4 +36,4 @@ SELECT ProductID, ProductName, P.CategoryID, CategoryName, UnitPrice FROM Produc
 	INNER JOIN (
 		    SELECT * FROM Categories
 		    )C ON C.CategoryID = P.CategoryID
-			WHERE P.CategoryID BETWEEN 3 AND 6 ORDER BY P.CategoryID DESC
+			WHERE P.CategoryID BETWEEN 3 AND 6 ORDER BY P.CategoryID ASC
